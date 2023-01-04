@@ -1,0 +1,20 @@
+head
+  meta charset='utf-8'
+  meta http-equiv='X-UA-Compatible' content='IE=edge'
+  meta name='viewport' content='width=device-width, initial-scale=1'
+  title = [@title, ' テスト用に作った'].compact.join(' - ')
+
+  title = content_for?(:title) ? yield(:title) : Rails.application.class.parent_name
+  / = favicon_link_tag 'eShip_fc1.png'
+
+  = csrf_meta_tags
+  = csp_meta_tag
+  = stylesheet_link_tag    'application', 'data-turbolinks-track': :reload, media: :all
+  = javascript_include_tag 'application', 'data-turbolinks-track': :reload
+  = javascript_include_tag '//kit.fontawesome.com/26c05a8f9a.js', crossorigin: :anonymous
+  = javascript_include_tag '//js.stripe.com/v3/'
+  / https://github.com/tuupola/lazyload
+  = javascript_include_tag '//cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js'
+
+  link href='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css' rel='stylesheet'
+  script src='https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js'

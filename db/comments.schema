@@ -1,0 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table :comments, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' do |t|
+  t.integer :board_id
+  t.string  :name
+  t.text    :comment
+
+  t.datetime :created_at, default: -> { 'CURRENT_TIMESTAMP' }, null: false
+  t.datetime :updated_at, default: -> { 'CURRENT_TIMESTAMP' }, null: false
+end

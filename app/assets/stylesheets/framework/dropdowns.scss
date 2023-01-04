@@ -1,0 +1,27 @@
+.dropdown-submenu {
+  position: relative;
+
+  .dropdown-toggle::after {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: .5rem;
+    margin-right: -1rem;
+    float: right;
+    border-width: .3rem 0  .3rem .3rem;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color: black;
+  }
+
+  .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -.5rem;
+  }
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}

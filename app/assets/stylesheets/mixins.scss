@@ -1,0 +1,20 @@
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin opacity($opacity) {
+  $opacity-ie:    $opacity * 100;
+  -khtml-opacity: $opacity; // Safari 1.x
+  -moz-opacity: $opacity; // FF , Netscape
+  filter: alpha(opacity = $opacity-ie);
+  opacity: $opacity;
+  zoom: 1;
+
+  &:not(:target) {
+    filter: none\9;
+  }
+}

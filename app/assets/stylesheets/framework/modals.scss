@@ -1,0 +1,17 @@
+.modal-header {
+  .close {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.modal-alert {
+  .alert {
+    margin: 0;
+    margin-top: -1px;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-radius: 0;
+    line-height: 1.5;
+  }
+}

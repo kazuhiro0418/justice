@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table :boards, force: :cascade, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' do |t|
+  t.string  :name
+  t.string  :title
+  t.text    :body
+  t.text    :body
+
+  t.datetime :created_at, default: -> { 'CURRENT_TIMESTAMP' }, null: false
+  t.datetime :updated_at, default: -> { 'CURRENT_TIMESTAMP' }, null: false
+end

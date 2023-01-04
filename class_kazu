@@ -1,0 +1,10 @@
+class Book
+attr_accessor :name, :pages
+end
+
+book = Book.new
+
+book.name = "初めてのルビー"
+puts book.name
+book.pages = "1"
+puts book.pages

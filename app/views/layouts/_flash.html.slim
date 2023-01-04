@@ -1,0 +1,9 @@
+- if flash.any?
+  - flash.each do |key, val|
+    - next if key == 'timedout'
+    .js-navbar-alert.navbar-alert class="#{flash_class(key)}"
+      = flash_message(val)
+      = flash_close
+
+- else
+  .js-navbar-alert.navbar-alert style='display: none;'

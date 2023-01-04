@@ -1,0 +1,26 @@
+/* line 2, app/assets/stylesheets/forms.scss */
+.form-inline input,
+.form-inline select {
+  height: calc(2.25rem - 1px);
+}
+
+/* line 8, app/assets/stylesheets/forms.scss */
+.form-inline input[type=file] {
+  padding: calc(.25rem - 1px) 0.25rem;
+}
+
+/* line 14, app/assets/stylesheets/forms.scss */
+.form-check-input,
+.form-check-label {
+  cursor: pointer;
+}
+
+/* line 17, app/assets/stylesheets/forms.scss */
+.form-check-input {
+  font-size: 1rem;
+}
+
+/* line 20, app/assets/stylesheets/forms.scss */
+#js-checked-all, .js-checkbox {
+  cursor: pointer;
+}

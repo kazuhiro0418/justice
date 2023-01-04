@@ -1,0 +1,45 @@
+body {
+  &.logged-in {
+    padding: 3.5rem 0;
+
+    .main,
+    .btn,
+    .form-control {
+      font-size: $font-size;
+    }
+  }
+}
+
+html {
+  font-size: $font-size;
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+// scss-lint:disable ImportantRule
+@include media-breakpoint-up(sm) {
+  .w-sm-auto {
+    width: auto !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .w-md-auto {
+    width: auto !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .w-lg-auto {
+    width: auto !important;
+  }
+}
+// scss-lint:enable ImportantRule

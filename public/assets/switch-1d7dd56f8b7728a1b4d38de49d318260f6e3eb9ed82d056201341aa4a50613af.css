@@ -1,0 +1,159 @@
+/* line 37, app/assets/stylesheets/switch.scss */
+.switch {
+  position: relative;
+  font-size: 1rem;
+}
+
+/* line 41, app/assets/stylesheets/switch.scss */
+.switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+  background: none;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+}
+
+/* line 52, app/assets/stylesheets/switch.scss */
+.switch input + label {
+  display: inline-block;
+  position: relative;
+  min-width: calc(calc(2.125rem - 2px) * 2);
+  height: calc(2.125rem - 2px);
+  margin-bottom: 0;
+  border-radius: calc(2.125rem - 2px);
+  outline: none;
+  line-height: calc(2.125rem - 2px);
+  text-indent: calc(calc(calc(2.125rem - 2px) * 2) + .5rem);
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 67, app/assets/stylesheets/switch.scss */
+.switch input + label::before,
+.switch input + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(calc(2.125rem - 2px) * 2);
+}
+
+/* line 78, app/assets/stylesheets/switch.scss */
+.switch input + label::before {
+  right: 0;
+  transition: 0.2s all;
+  border-radius: calc(2.125rem - 2px);
+  background-color: #dee2e6;
+}
+
+/* line 85, app/assets/stylesheets/switch.scss */
+.switch input + label::after {
+  top: 2px;
+  left: 2px;
+  width: calc(calc(2.125rem - 2px) - calc(2px * 2));
+  height: calc(calc(2.125rem - 2px) - calc(2px * 2));
+  transition: 0.2s all;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* line 95, app/assets/stylesheets/switch.scss */
+.switch input:checked + label::before {
+  background-color: #007bff;
+}
+
+/* line 99, app/assets/stylesheets/switch.scss */
+.switch input:checked + label::after {
+  margin-left: calc(2.125rem - 2px);
+}
+
+/* line 103, app/assets/stylesheets/switch.scss */
+.switch input:focus + label::before {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* line 108, app/assets/stylesheets/switch.scss */
+.switch input:disabled + label {
+  color: #868e96;
+  cursor: not-allowed;
+}
+
+/* line 113, app/assets/stylesheets/switch.scss */
+.switch input:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+/* line 119, app/assets/stylesheets/switch.scss */
+.switch.switch-sm {
+  font-size: 0.875rem;
+}
+
+/* line 123, app/assets/stylesheets/switch.scss */
+.switch.switch-sm input + label {
+  min-width: calc(calc(1.9375rem - 2px) * 2);
+  height: calc(1.9375rem - 2px);
+  line-height: calc(1.9375rem - 2px);
+  text-indent: calc(calc(calc(1.9375rem - 2px) * 2) + .5rem);
+}
+
+/* line 130, app/assets/stylesheets/switch.scss */
+.switch.switch-sm input + label::before {
+  width: calc(calc(1.9375rem - 2px) * 2);
+}
+
+/* line 134, app/assets/stylesheets/switch.scss */
+.switch.switch-sm input + label::after {
+  width: calc(calc(1.9375rem - 2px) - calc(2px * 2));
+  height: calc(calc(1.9375rem - 2px) - calc(2px * 2));
+}
+
+/* line 139, app/assets/stylesheets/switch.scss */
+.switch.switch-sm input:checked + label::after {
+  margin-left: calc(1.9375rem - 2px);
+}
+
+/* line 146, app/assets/stylesheets/switch.scss */
+.switch.switch-lg {
+  font-size: 1.25rem;
+}
+
+/* line 150, app/assets/stylesheets/switch.scss */
+.switch.switch-lg input + label {
+  min-width: calc(calc(3rem - 2px) * 2);
+  height: calc(3rem - 2px);
+  line-height: calc(3rem - 2px);
+  text-indent: calc(calc(calc(3rem - 2px) * 2) + .5rem);
+}
+
+/* line 157, app/assets/stylesheets/switch.scss */
+.switch.switch-lg input + label::before {
+  width: calc(calc(3rem - 2px) * 2);
+}
+
+/* line 161, app/assets/stylesheets/switch.scss */
+.switch.switch-lg input + label::after {
+  width: calc(calc(3rem - 2px) - calc(2px * 2));
+  height: calc(calc(3rem - 2px) - calc(2px * 2));
+}
+
+/* line 166, app/assets/stylesheets/switch.scss */
+.switch.switch-lg input:checked + label::after {
+  margin-left: calc(3rem - 2px);
+}
+
+/* line 172, app/assets/stylesheets/switch.scss */
+.switch + .switch {
+  margin-left: 1rem;
+}

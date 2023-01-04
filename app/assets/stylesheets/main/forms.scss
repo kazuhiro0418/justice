@@ -1,0 +1,22 @@
+.form-inline {
+  input,
+  select {
+    height: calc(2.25rem - 1px);
+  }
+
+  input {
+    &[type=file] {
+      padding: calc(.25rem - 1px) .25rem;
+    }
+  }
+}
+
+.form-check-input,
+.form-check-label { cursor: pointer; }
+
+.form-check-input { font-size: 1rem; }
+.form-check-label { @extend %unselectable; }
+
+#js-checked-all, .js-checkbox {
+  cursor: pointer
+}

@@ -1,0 +1,12 @@
+ja:
+  enums:
+    order_item:
+      status:
+        pending: 未注文
+        purchased: 注文済
+        stocked: 納品済
+        shipped: 発送済
+        return_refunded: R返金
+        return_partial_refunded: R一部返金
+        undelivered_refunded: 未着返金
+        cancelled: キャンセル

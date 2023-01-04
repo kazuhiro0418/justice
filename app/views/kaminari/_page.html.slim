@@ -1,0 +1,12 @@
+- if page.current?
+  = content_tag :span,
+    page,
+    remote: remote,
+    rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)),
+    class: 'page-link active'
+- else
+  = link_to page,
+    url,
+    remote: remote,
+    rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)),
+    class: 'page-link'

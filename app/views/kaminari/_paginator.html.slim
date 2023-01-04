@@ -1,0 +1,17 @@
+= paginator.render do
+  nav.mt-4
+    ul.pagination.justify-content-center
+      .page-item
+        == first_page_tag
+      .page-item
+        == prev_page_tag
+      - each_page do |page|
+        .page-item
+          - if page.left_outer? || page.right_outer? || page.inside_window?
+            == page_tag page
+          - elsif !page.was_truncated?
+            == gap_tag
+      .page-item
+        == next_page_tag
+      .page-item
+        == last_page_tag

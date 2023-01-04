@@ -1,0 +1,16 @@
+.loading-container {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 43, 44, .4);
+  text-align: center;
+
+  .fa-spin {
+    position: relative;
+    top: calc(50% - 1.25rem);
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,9 @@
+- if current_page.first?
+  = tag.a raw(t('views.pagination.first')),
+    class: 'page-link previous goto-first px-3 disabled'
+- else
+  = link_to raw(t('views.pagination.first')),
+    url,
+    remote: remote,
+    class: 'page-link previous goto-first px-3'
+

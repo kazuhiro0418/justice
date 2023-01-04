@@ -1,0 +1,23 @@
+.container.py-3
+  .row.justify-content-center
+    .col-12.col-lg-5
+      .card.my-5
+        .card-header.pr-3
+          = @title = t('devise.passwords.new.title')
+
+        .card-body
+          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+            = devise_error_messages!
+
+            .form-group
+              = f.label :email
+              = f.email_field :email,
+                class: 'form-control',
+                autofocus: true,
+                autocomplete: 'email'
+
+            .form-group
+              = f.submit '再設定メール送信',
+                class: 'btn btn-primary btn-block'
+
+          = render 'devise/shared/links'
