@@ -1,0 +1,9 @@
+- if current_page.first?
+  = tag.a raw(t('views.pagination.previous')),
+    class: 'page-link previous disabled'
+- else
+  = link_to raw(t('views.pagination.previous')),
+    url,
+    rel: 'prev',
+    remote: remote,
+    class: 'page-link previous'

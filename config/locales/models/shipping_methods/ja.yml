@@ -1,0 +1,41 @@
+ja:
+  activerecord:
+    models:
+      shipping_method: 配送方法
+    attributes:
+      shipping_method:
+        ems_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        epacket_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        epacket_light_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        small_packing_airmail_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        iparcel_sal_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        dhl_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米
+        fedex_shipping_price:
+          area1_price: アジア
+          area2_price: 北米
+          area3_price: 欧州
+          area4_price: 南米

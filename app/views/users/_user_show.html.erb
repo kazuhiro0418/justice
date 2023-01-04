@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <h4><%= user.name %></h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-1">
+        <% if user.image_url.present? %>
+        <%= image_tag user.image_url, size: "75x75" %>
+        <% end %>
+      </div>
+      <div class="col-10">
+        <p class="card-text"><%= simple_format(user.body) %></p>
+      </div>
+    </div>
+    <p class="text-right font-weight-bold mr-10"><%= user.email %></p>
+  </div>
+</div> 

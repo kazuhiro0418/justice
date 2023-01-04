@@ -1,0 +1,8 @@
+doctype html
+html
+  == render 'layouts/head'
+  body
+    == render 'layouts/header'
+    / == render 'layouts/flash'
+    .container-fluid.py-3 == yield
+    / == render 'layouts/footer'

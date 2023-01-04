@@ -1,0 +1,33 @@
+.navbar-alert,
+.alert {
+  .close {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    outline: none;
+  }
+}
+
+// !important を使わないために div を指定している
+div {
+  &.alert {
+    padding-right: 2.5rem;
+
+    .close {
+      top: .65rem;
+      right: .5rem;
+    }
+  }
+
+  &.navbar-alert {
+    margin-bottom: 0;
+    padding-right: 3rem;
+    border-radius: 0;
+    line-height: 2;
+
+    .close {
+      top: .65rem;
+      right: 1rem;
+    }
+  }
+}

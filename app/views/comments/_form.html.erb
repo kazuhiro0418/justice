@@ -1,0 +1,35 @@
+<%= render 'shared/error_messages' %>
+
+<div class="p-comment__formBox">
+  <p class="p-comment__formTitle">コメント記入</p>
+  <%= form_for comment do |f| %>
+    <%= f.hidden_field :board_id %>
+    <div class="form-group">
+      <%= f.label :name, '名前' %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :comment, 'コメント' %>
+      <%= f.text_area :comment, class: 'form-control', rows: 4 %>
+    </div>
+    <div class="form-group">
+      <span>ユーザー選択</span>
+      <%= f.collection_select(:user_ids, User.all, :id, :name, :prompt => "選択してください") %>
+    </div>
+    <%= f.submit '送信', class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<style type="text/css">
+  .p-comment__formBox {
+    margin: 30px auto;
+    border: 5px solid #e8e8e8;
+    padding: 25px;
+    border-radius: 14px;
+  }
+
+  .p-comment__formTitle {
+    border-bottom: 2px solid #dfdfdf;
+    padding-bottom: 5px;
+  }
+</style>

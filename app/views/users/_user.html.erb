@@ -1,0 +1,24 @@
+<tr>
+  <td><%= user.id %></td>
+  <td><%= user.name %></td>
+  <td>
+    <% if user.image_url.present? %>
+      <%= image_tag user.image_url, class: "rounded-circle", size: "75x75" %>
+    <% end %>
+  </td>
+  <td><%= user.body %></td>
+  <td></td>
+  <td></td>
+
+  <%
+=begin%>
+ <td><%= boards.where(user.name).count %></td>
+  <td><%=  comments.where(user.name).count %></td> 
+<%
+=end%>
+  <td><%= user.email %></td>
+  <td><%= user.created_at.to_s(:datetime) %></td>
+  <td><%= user.updated_at.to_s(:datetime) %></td>
+  <td><%= link_to '詳細', user_path(id: user.id) , class: "btn btn-outline-dark" %></td>
+  <td><%= link_to '削除', user_path(id: user.id) , class: "btn btn-danger", method: :delete %></td> 
+</tr>

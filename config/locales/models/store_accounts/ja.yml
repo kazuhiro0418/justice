@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      store_account: ストアアカウント
+    attributes:
+      store_account:
+        ebay_user_id: セラーID
+        token_expires_at: 有効期限
+        exchange_rate: 為替
+        fedex_fuel_surcharge_rate: Fedex燃油%
+        dhl_fuel_surcharge_rate: DHL燃油%
+        overseas_sales_fee_rate: 海外販売手数料%
+        payoneer_fee_rate: ペイオニア手数料%
+        is_surcharge_applied: ESSオン/オフ
+        is_paused: 稼働停止

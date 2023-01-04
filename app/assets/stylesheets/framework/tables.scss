@@ -1,0 +1,34 @@
+.scroll_div { // scss-lint:disable SelectorFormat
+  overflow: auto;
+
+  .table th {
+    box-sizing: content-box;
+  }
+}
+
+.table {
+  th,
+  td {
+    &.fit {
+      width: 1%;
+      white-space: nowrap;
+    }
+  }
+
+  $thumb: 4.5rem;
+
+  .thumbnail {
+    position: relative;
+    width: $thumb;
+    height: $thumb;
+    overflow: hidden;
+    background: white;
+
+    img {
+      width: 100%;
+      height: 100%;
+      // chrome only
+      object-fit: contain;
+    }
+  }
+}

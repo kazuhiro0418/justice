@@ -1,0 +1,74 @@
+ja:
+  activerecord:
+    models:
+      inventory: 出品
+    attributes:
+      inventory:
+        user_id: ユーザーID
+        store_account_id: ストアID
+
+        supplier_url: 仕入URL
+        ebay_url: eBay URL
+
+        # 出品情報
+        status: 出品ステータス
+        ebay_item_id: Item ID
+        name: 商品名
+        ebay_category_id: Category ID
+        ebay_category_path: Category
+        fvf_rate: FVF%
+        watch_count: Watch
+        selling_price: 販売価格($)
+        quantity: 出品数
+        stock_out_action: 在庫切れ処理
+
+        # 仕入情報
+        supplier_id: 仕入元
+        asin: ASIN
+        stock_condition_id: 在庫コンディション
+        purchase_price: 仕入価格(¥)
+        discount_rate: 割引%
+        discount_point: 割引P
+        purchase_total: 仕入原価(¥)
+
+        # 利益
+        profit: 利益額(¥)
+        profit_rate: 利益率(%)
+        profit_formula: 利益計算式
+        tax_refunded_profit: 還付込利益額(¥)
+        tax_refunded_profit_rate: 還付込利益率(%)
+
+        # 送料
+        height: 高さ(cm)
+        length: 長さ(cm)
+        width: 幅(cm)
+        volume_weight: 容積重量(g)
+        weight: 重量(g)
+        shipping_method_id: 発送方法
+        shipping_area_id: 地帯
+        shipping_price: 送料(¥)
+
+        # 参考
+        keyword: キーワード
+        ref_ebay_item_id: 参考Item ID
+        ref_ebay_url: 参考eBay URL
+        title: タイトル
+        item_condition_id: 状態
+        condition_description: 状態説明
+        image_url: 画像
+        best_offer: BestOffer
+        shipping_policy_id: Shipping Policy
+        memo: 備考
+
+        in_operation: 処理ON/OFF
+  enums:
+    inventory:
+      status:
+        pending: 未出品
+        active: 出品中
+        ended: 出品停止
+        error: エラー
+      stock_out_action:
+        stock_out: 1. Quantity 0
+        end_listing: 2. End Items
+        leave_as_is: 3. 処理なし

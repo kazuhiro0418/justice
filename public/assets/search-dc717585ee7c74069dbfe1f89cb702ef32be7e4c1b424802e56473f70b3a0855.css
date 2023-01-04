@@ -1,0 +1,38 @@
+/* line 3, app/assets/stylesheets/search.scss */
+.js-search-form input[type=search] {
+  width: 18rem;
+}
+
+/* line 10, app/assets/stylesheets/search.scss */
+.js-fillter-body tr td {
+  border: 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* line 15, app/assets/stylesheets/search.scss */
+.js-fillter-body tr label {
+  display: block;
+  width: 9rem;
+  margin-bottom: 0;
+}
+
+/* line 21, app/assets/stylesheets/search.scss */
+.js-fillter-body tr td:first-child {
+  width: 1%;
+  vertical-align: middle;
+}
+
+/* line 26, app/assets/stylesheets/search.scss */
+.js-fillter-body tr td:last-child {
+  padding: .25rem;
+}
+
+/* line 27, app/assets/stylesheets/search.scss */
+.js-fillter-body tr:first-child td {
+  padding-top: 1rem;
+}
+
+/* line 28, app/assets/stylesheets/search.scss */
+.js-fillter-body tr:last-child td {
+  padding-bottom: 1rem;
+}

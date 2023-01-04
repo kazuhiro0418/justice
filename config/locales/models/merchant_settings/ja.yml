@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    models:
+      supplier_setting: ユーザ
+    attributes:
+      supplier_setting:
+        feedback_count: 評価数（○○以上）
+        feedback_rate: 評価率（○○%以上）
+        shipping_time: リードタイム（○○日以内）
+        fulfilment_channel: 出荷元
+  enums:
+    supplier_setting:
+      feedback_rate:
+        just_launched: Just Launched
+        less_than_70:  70%以下
+        range_70_79:   70-79%
+        range_80_89:   80-89%
+        range_90_94:   90-94%
+        range_95_97:   95-97%
+        range_98_100:  98-100%
+      shipping_time:
+        days_0_2:      0-2日
+        days_3_7:      3-7日
+        days_8_13:     8-13日
+        days_14:       14日以上
+      fulfilment_channel:
+        unspecified:   指定なし
+        amazon:        Amazon
+        merchant:      マーチャント

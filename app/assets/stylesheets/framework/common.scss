@@ -1,0 +1,69 @@
+.unselectable,
+%unselectable {
+  @include prefix(user-select, none, moz ms webkit);
+}
+
+.pointer,
+%pointer {
+  cursor: pointer;
+}
+
+.nowrap,
+%nowrap {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  @extend %nowrap;
+
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.title {
+  margin: .2188rem 0;
+}
+
+.no-image {
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  i {
+    position: absolute;
+    top: calc(25% - 20px);
+    left: calc(50% - 20px);
+    font-size: 40px;
+  }
+}
+
+.small {
+  font-size: 80%;
+}
+
+.researches_table th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.researches_table thead td {
+  position: sticky;
+  top: 39px;
+  z-index: 1;
+  color: #495057;
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+.researches_table{
+  display: block;
+  overflow: scroll;
+  position: relative;
+  height: 68vh;
+  border-collapse: separate;
+  border-spacing: 0;
+}

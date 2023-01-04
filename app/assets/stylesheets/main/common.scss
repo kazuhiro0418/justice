@@ -1,0 +1,81 @@
+.unselectable,
+%unselectable {
+  @include prefix(user-select, none, moz ms webkit);
+}
+
+.nowrap,
+%nowrap {
+  white-space: nowrap;
+}
+
+.ellipsis {
+  @extend %nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.text-light-primary {
+  color: lighten($primary, 20%);
+
+  &:hover {
+    color: lighten($primary, 10%);
+  }
+}
+
+label {
+  &.required::after {
+    content: '\002a';
+    margin-left: 1px;
+    color: red;
+  }
+}
+
+.no-image {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  i {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    font-size: 40px;
+  }
+}
+
+.variation_asin_area {
+  max-width: 500px;
+  overflow-wrap: break-word;
+}
+
+.red_accent {
+  font-weight: bold;
+  color: rgb(196, 26, 26);
+}
+
+
+.btn-registration {
+  color: #212529;
+  background: linear-gradient(0deg, rgba(245,180,50,1) 0%, rgba(254,207,77,1) 100%);
+  box-shadow: 0 1px 3px 0 #BFBFBF;
+  border: solid #000000 1px;
+  transition: unset !important;
+}
+
+.btn-registration:hover {
+  background: #F5B432 !important;
+}
+
+.registration_title {
+  font-size: 2.2rem;
+}
+
+.manual_title {
+  color: red;
+  font-size: 1.4rem;
+}

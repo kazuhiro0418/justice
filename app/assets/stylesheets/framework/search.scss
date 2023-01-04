@@ -1,0 +1,38 @@
+.search-form {
+  input {
+    &[type=search] {
+      width: 15rem;
+    }
+  }
+
+  tr {
+    td {
+      border: 0;
+      background: rgba(0, 0, 0, .05);
+    }
+
+
+    label {
+      display: block;
+      width: 9rem;
+      margin-bottom: 0;
+    }
+
+    td:first-child {
+      width: 1%;
+      vertical-align: middle;
+    }
+
+    td:last-child {
+      padding: .5rem;
+    }
+
+    &:first-child td {
+      padding-top: 1rem;
+    }
+
+    &:last-child td {
+      padding-bottom: 1rem;
+    }
+  }
+}
