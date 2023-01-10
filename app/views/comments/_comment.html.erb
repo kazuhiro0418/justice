@@ -1,8 +1,17 @@
 <div class="p-comment__item">
+  <div class="row">
+    <div class="col-auto">
+      <%= link_to user_path(id: comment.user.id) do%>
+        <span><%= image_tag comment.user.image_url, class: "resize_image" %></span>
+      <% end %>
+    </div>
+    <div class="col-md-2">
+      <p><%= link_to comment.user.name, user_path(id: comment.user.id) %>さん</p>
+      <p>投稿日時<%= comment&.created_at&.to_s(:datetime) %></p>
+    </div>
+  </div>
   <p><%= simple_format(comment.comment) %></p>
   <div class="p-comment__bottomLine">
-    <span><%= comment.name %></span>
-    <span><%= comment&.created_at&.to_s(:datetime) %></span>
     <span><%= link_to '削除', comment_path(id: comment.id), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></span>
   </div>
 </div>
@@ -43,5 +52,14 @@
       font-size: 14px;
       margin: 0 12px;
     }
+  }
+
+  .resize_image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #333300;
   }
 </style>

@@ -2,11 +2,32 @@
   <div class="card-header">
     <h4><%= unko.title %></h4>
     <% unko.tags.each do |tag| %>
-    <span class="badge badge-primary"><%= tag.name %></span>
+      <span class="badge badge-primary"><%= tag.name %></span>
     <% end %>
   </div>
   <div class="card-body">
+    <div class="row">
+      <div class="col-auto">
+        <%= link_to user_path(id: unko.user.id) do %>
+          <%= image_tag unko.user.image_url, class: "resize_image" %>
+        <%end %>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to unko.user.name, user_path(id: unko.user.id) %>さん</p>
+        <p>投稿日時：<%= unko.created_at.to_s(:datetime) %></p>
+      </div>
+    </div>
     <p class="card-text"><%= simple_format(unko.body) %></p>
-    <p class="text-right font-weight-bold mr-10"><%= unko.name %></p>
   </div>
 </div>
+
+<style>
+  .resize_image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #333300;
+  }
+</style>

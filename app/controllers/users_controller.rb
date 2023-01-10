@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @users = @users.page(params[:page])
   end
 
   def new
@@ -15,10 +16,9 @@ class UsersController < ApplicationController
       flash[:notice] = "#{user.name}さんのユーザー情報を作成しました"
       redirect_to user
     else
-      redirect_to new_user_path, flash: {
-        user: user,
-        error_messages: user.errors.full_messages
-      }
+      flash[:user] = user
+      flash[:error_messages] = user.errors.full_messages
+      redirect_to new_user_path
     end
   end
 
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :icon, :body, :email)
+    params.require(:user).permit(:name, :image_url, :body, :email)
   end
 
   def set_target_user

@@ -1,13 +1,10 @@
 class User < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 10 } 
   validates :image_url, presence: true
-  validates :body, presence: true
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+\.[a-z]+\z/i
+  validates :body, length: { maximum: 40 } 
+  VALID_EMAIL_REGEX = /\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\z/
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },uniqueness: true
   
-  has_many :board_user_relations, dependent: :delete_all
-  has_many :boards, through: :board_user_relations
-  has_many :comment_user_relations, dependent: :delete_all
-  has_many :comments, through: :comment_user_relations
-
+  has_many :boards
+  has_many :comments
 end

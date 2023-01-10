@@ -1,19 +1,20 @@
 <%= render 'shared/error_messages' %>
+
 <%= form_for user do |f| %>
   <div class="form-group">
-    <%= f.label :name, '名前' %>
+    <%= f.label :name, '名前' %><span class="badge badge-danger">必須</span>
     <%= f.text_field :name, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :image_url, 'アイコン' %>
+    <%= f.label :image_url, 'アイコン' %><span class="badge badge-danger">必須</span>
     <%= f.text_field :image_url, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :body, 'ひと言' %>
+    <%= f.label :body, 'ひと言' %><span class="badge badge-secondary">任意</span>
     <%= f.text_field :body, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :email, 'メールアドレス' %>
+    <%= f.label :email, 'メールアドレス' %><span class="badge badge-danger">必須</span>
     <%= f.email_field :email, class: 'form-control', rows: 10 %>
   </div>
   <%= f.submit '保存', class: 'btn btn-primary' %>

@@ -17,8 +17,8 @@ class BoardsController < ApplicationController
       redirect_to board
     else
       redirect_to new_board_path
-        flash[:board] = board
-        flash[:error_messages] = board.errors.full_messages
+      flash[:board] = board
+      flash[:error_messages] = board.errors.full_messages      
     end
   end
 
@@ -47,7 +47,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :title, :body, tag_ids:[], user_ids:[])
+    params.require(:board).permit(:name, :title, :body, :user_id, tag_ids:[])
   end
 
   def set_target_board
